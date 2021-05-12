@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+    <blockquote>
+        <h4>Hello!!</h4>
+        Welcome back You can add new item to the list by entering teh item in the box bellow
+    </blockquote>
+
+    <form action="add_todo/" method="post" class="row">
+        <div class="input-field col s6">
+            <input name="content" id="new_item_name" type="text" class="validate">
+            <label class="active" for="new_item_name">Enter Item Name</label>
+        </div>
+        <button type="submit" class="btn-floating btn-large cyan pulse">
+            <i class="material-icons">add</i>
+        </button>
+    </form>
+
+    <ul class="collection with-header">
+        <li class="collection-header"><h5>Incompleted Items In Your List</h5></li>
+        {% for i in todo_items|slice:"0:" %}
+            <li class="collection-item">
+                <div>
+                    <form action="todo_completed/{{i.id}}/" method="post">
+                        <p>
+                            <label>
+                                <button name="completed_radio" class="completed_radio" type="radio" checked></button>
+                                <span class="completed_radio_span"></span>
+                            </label>
+                        </p>
+                    </form>
+                    <blockquote class="todo_item_text">
+                        {{i.text}}
+                    </blockquote>
+                    <form action="delete_todo/{{i.id}}/" class="material-icons secondary-content" method="post">
+                        <button class="btn btn-floating">
+                            <i class="material-icons red ">delete</i>
+                        </button>
+                    </form>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <ul class="collection with-header">
+        <li class="collection-header"><h5>Completed Items In Your List</h5></li>
+        {% for i in completed_items|slice:"0:" %}
+            <li class="collection-item">
+                <div>
+                    <form action="todo_incomplete/{{i.id}}/" method="post">
+                        <p>
+                            <label>                                
+                                <button name="uncompleted_radio" class="uncompleted_radio" type="radio" checked></button>
+                                <span class="uncompleted_radio_span"></span>
+                            </label>
+                        </p>
+                    </form>
+                    <blockquote class="todo_item_text">
+                        {{i.text}}
+                    </blockquote>
+                    <form action="delete_todo/{{i.id}}/" class="material-icons secondary-content" method="post">
+                        <button class="btn btn-floating">
+                            <i class="material-icons red ">delete</i>
+                        </button>
+                    </form>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock body %}

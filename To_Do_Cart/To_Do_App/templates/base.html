@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Loading Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+    <!-- Loading Static -->
+    <script src="https://kit.fontawesome.com/d178991aaf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Loading Custom CSS-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Tab Decoration -->
+    <link rel="icon" href="{% static 'images/icon.png' %}" type="image/png">
+    <title>Adi's TODO</title>
+</head>
+<body>
+
+    <header>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper container">
+            <a href="/" class="brand-logo">TODO BY ADITHYAN</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="/all">View Todo's</a></li>
+              <li><a href="/organise">Control Todo's</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>    
+
+    <section class="container">
+        {% block body %}{% endblock body %}
+    </section>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h4 class="white-text">To Do Created By Adithyan</h4>
+                    <p class="grey-text text-lighten-4">
+                        So, now you have started using this app. Just trust me this one will surely help you.<br><hr>
+                        I think that you are satisfied with my app and If you are satisfied then follow us on other platforms also
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">VISIT US</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="github.com/AdithyanA2005">Github</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/channel/UCbqvb_Tl7vFEBQBeAUV8GIQ">Youtube</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"></a>Instagram</li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Dream World Website</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container footer">
+                © 2021 Copyright | Dream World
+                <p class="grey-text text-lighten-4 right" href="#!">Visit Us | 
+                    <a class="footer_icons" href="github.com/AdithyanA2005"><i class="fa-1x fab fa-github"></i></a>
+                    <a class="footer_icons" href="https://www.youtube.com/channel/UCbqvb_Tl7vFEBQBeAUV8GIQ"><i class="fa-1x fab fa-youtube"></i></a>
+                    <a class="footer_icons" href="dreamworld.com"><i class="fa-1x fas fa-leaf"></i></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

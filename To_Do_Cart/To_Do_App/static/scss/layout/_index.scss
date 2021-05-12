@@ -1,0 +1,45 @@
+blockquote h4 {
+    color: $colr1;
+}
+
+body {
+    color: $colr2;
+}
+
+.collection-header {
+    height: 5rem;
+    color: $colr1;
+}
+
+.collection-item div {
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collection-item form {
+    right: 0;
+}
+
+.todo_item_text {
+    display: flex;
+    width: 59vw;
+    height: 3rem;
+    align-items: center;
+}
+
+.uncompleted_radio_span::before{
+    background-color: $colr1;
+    border: 0px solid black;
+}
+
+
+.uncompleted_radio_span::after{
+    background-color: $colr1;
+    border: 0px solid black;
+}
+
+[type="radio"]:not(:checked) + span::before, [type="radio"]:not(:checked) + span::after {
+    border: 2px solid $colr1;
+}

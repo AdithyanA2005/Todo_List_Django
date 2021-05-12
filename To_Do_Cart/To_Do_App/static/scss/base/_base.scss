@@ -1,0 +1,30 @@
+p, input, li, ::placeholder {
+    font-family: $font2;
+}
+
+hr {
+    color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer {
+    align-items: center;
+}
+
+.footer_icons{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    margin-right: 10px;
+    margin-left: 20x;
+}
+
+.brand-logo {
+    font-family: $font1;
+}
+
+.nav-wrapper ul {
+    font-family: $font2;
+    font-weight: 1000;
+}

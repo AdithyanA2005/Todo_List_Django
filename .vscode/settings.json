@@ -1,0 +1,17 @@
+{
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "liveSassCompile.settings.autoprefix": [],
+    "liveSassCompile.settings.showOutputWindow": false,
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "To_Do_Cart/To_Do_App/static/css"
+        }
+    ],   
+}
